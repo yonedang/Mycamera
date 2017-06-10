@@ -65,12 +65,25 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     // 撮影した画像をpictureImageに設定
     // as? UIImageのところは、anyになっているところをUIImageにキャストしている
-    pictureImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    captureImage = info[UIImagePickerControllerOriginalImage] as? UIImage
     
-    dismiss(animated: true, completion: nil)
+    dismiss(animated: true, completion: {
+      
+      self.performSegue(withIdentifier: "showEffectView", sender: nil)
+      
+    })
   }
   
+  var captureImage : UIImage?
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    // 設計的にEffectViewControllerは絶対あるので「as!」　強制アンラップ
+    let nextViewController = segue.destination as! EffectViewController
+    
+    nextViewController.originalImage = captureImage
+    
+  }
   
   
 

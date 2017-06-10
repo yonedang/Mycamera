@@ -12,6 +12,7 @@
 		8E7273B01EEB8E7B00CA5E69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7273AE1EEB8E7B00CA5E69 /* Main.storyboard */; };
 		8E7273B21EEB8E7B00CA5E69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7273B11EEB8E7B00CA5E69 /* Assets.xcassets */; };
 		8E7273B51EEB8E7B00CA5E69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7273B31EEB8E7B00CA5E69 /* LaunchScreen.storyboard */; };
+		8E7273BD1EEB9E2800CA5E69 /* EffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7273BC1EEB9E2800CA5E69 /* EffectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8E7273B11EEB8E7B00CA5E69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E7273B41EEB8E7B00CA5E69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E7273B61EEB8E7B00CA5E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E7273BC1EEB9E2800CA5E69 /* EffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				8E7273AA1EEB8E7B00CA5E69 /* AppDelegate.swift */,
 				8E7273AC1EEB8E7B00CA5E69 /* ViewController.swift */,
 				8E7273AE1EEB8E7B00CA5E69 /* Main.storyboard */,
+				8E7273BC1EEB9E2800CA5E69 /* EffectViewController.swift */,
 				8E7273B11EEB8E7B00CA5E69 /* Assets.xcassets */,
 				8E7273B31EEB8E7B00CA5E69 /* LaunchScreen.storyboard */,
 				8E7273B61EEB8E7B00CA5E69 /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				8E7273AD1EEB8E7B00CA5E69 /* ViewController.swift in Sources */,
 				8E7273AB1EEB8E7B00CA5E69 /* AppDelegate.swift in Sources */,
+				8E7273BD1EEB9E2800CA5E69 /* EffectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
