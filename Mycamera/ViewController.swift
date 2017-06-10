@@ -25,20 +25,39 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
   
   @IBAction func cameraButtonAction(_ sender: Any) {
     
-    // カメラが使えるかチェック
+    // 「.actionSheet」は下から表示するダイアログ
+    let alertController = UIAlertController(title: "確認", message: "選択してください", preferredStyle: .actionSheet)
+    
     if UIImagePickerController.isSourceTypeAvailable(.camera){
-      print("カメラは利用できます")
-      
-      let ipc = UIImagePickerController()
-      
-      ipc.sourceType = .camera
-      
-      ipc.delegate = self
-      
-      present(ipc, animated: true, completion: nil)
-    }else{
-      print("カメラが利用できません")
+      let cameraAction = UIAlertAction(title: "カメラ", style: .default, handler: {(action:UIAlertAction) in
+        let ipc: UIImagePickerController = UIImagePickerController()
+        ipc.sourceType = .camera
+        ipc.delegate = self
+        self.present(ipc, animated: true, completion: nil)
+      })
+      alertController.addAction(cameraAction)
     }
+    
+    
+    if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+      let photoLibraryAction = UIAlertAction(title: "フォトライブラリー", style: .default, handler: {(action:UIAlertAction) in
+        let ipc: UIImagePickerController = UIImagePickerController()
+        ipc.sourceType = .photoLibrary
+        ipc.delegate = self
+        self.present(ipc, animated: true, completion: nil)
+      })
+      alertController.addAction(photoLibraryAction)
+    }
+    
+
+    let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+    alertController.addAction(cancelAction)
+    
+    alertController.popoverPresentationController?.sourceView = view
+    
+    present(alertController, animated: true, completion: nil)
+    
+    
   }
   
   @IBAction func SNSButtonAction(_ sender: Any) {
